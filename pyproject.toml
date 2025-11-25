@@ -14,8 +14,13 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "pillow>=11.1.0",
     "python-dotenv>=1.0.1",
+    "rasterfairy",
     "scikit-learn>=1.6.1",
     "scipy>=1.15.1",
     "spotipy>=2.25.0",
     "toml>=0.10.2",
+    "umap-learn>=0.5.9.post2",
 ]
+
+[tool.uv.sources]
+rasterfairy = { git = "https://github.com/Quasimondo/RasterFairy.git", rev = "v1.1.0" }
