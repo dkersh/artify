@@ -10,7 +10,7 @@ from PIL import Image
 from spotipy.oauth2 import SpotifyOAuth
 from tqdm import tqdm
 
-from artify import image_feature_processing
+import image_feature_processing
 
 
 @dataclass(frozen=True)

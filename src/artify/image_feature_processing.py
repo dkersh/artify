@@ -1,6 +1,6 @@
-from PIL import Image, ImageCms
 import numpy as np
 import rasterfairy
+from PIL import Image, ImageCms
 from sklearn.manifold import TSNE
 
 

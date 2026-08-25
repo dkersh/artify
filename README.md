@@ -5,18 +5,13 @@ Create a mosaic from your favourite albums
 ## Usage
 For a .csv file of albums:
 
-```
-client_info = toml.load('spotify_user_details.toml')
-CLIENT_ID = client_info['SpotifyUser']['CLIENT_ID']
-CLIENT_SECRET = client_info['SpotifyUser']['CLIENT_SECRET']
+```python
+client_id = "XXX"
+client_secret = "YYY"
+redirect_url = "ZZZ"
 
-sp = spotipy.Spotify(
-    auth_manager=SpotifyClientCredentials(
-        client_id=CLIENT_ID,
-        client_secret=CLIENT_SECRET)
-        )
-mm = mosaic_maker.MosaicMaker(sp)
-mm.get_albums('src/album_list.csv')
-mm.sort_album_list(method='color')
-mosaic = mm.create_mosaic()
+artify = Artify(client_id, client_secret, redirect_url)
+
+artify.pull_top_albums(100)
+mosaic = artify.generate_mosaic()
 ```
